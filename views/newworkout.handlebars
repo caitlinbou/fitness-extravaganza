@@ -1,0 +1,33 @@
+<div class="container">
+  <div class="flex-row">
+    <div class="col-6">
+      <form action="/submit" method="post">
+        <h1>Let's build the burn!</h1>
+        <h4>Name your burn session:</h4>
+        <input type="text" name="title" placeholder="workout name">
+        <br> <br>
+        <div id="addexercise">
+          <h6>Add New Exercises:</h6>
+          <div class="card" style="width: 18rem;">
+            <input type="text" name="name" placeholder="name">
+            <input type="text" name="type" placeholder="type: cardio/body/weights/etc">
+            <input type="number" name="weight" placeholder="weight">
+            <input type="number" name="sets" placeholder="sets">
+            <input type="number" name="reps" placeholder="reps">
+            <input type="text" name="duration" placeholder="duration">
+          </div>
+          <button class="btn-secondary add">add</button>
+        </div>
+        <div class="col-6">
+          <h6>Select from existing exercises:</h6>
+          {{#each exercise}}
+          <p>{{exercise.name}}</p>
+          <button class="btn-secondary add">Add</button>
+          {{/each}}
+        </div>
+        <button type="submit" class="btn btn-primary start">Start Session</button>
+      </form>
+    </div>
+  </div>
+</div>
+</div>

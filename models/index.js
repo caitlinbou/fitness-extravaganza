@@ -1,1 +1,5 @@
-// function get.json, fir 
+// export an object containing all models
+module.exports = {
+    Exercise: require("./Exercise"),
+    Workout: require("./Workout")
+};
